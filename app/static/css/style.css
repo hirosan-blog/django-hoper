@@ -1,0 +1,154 @@
+:root{
+  --base-color:#eee;
+  --base2-color:#e6e6e6;
+  --main-color:#cc3d3d;
+  --black-color:#515151;
+}
+
+body{
+  margin:0px auto;
+  padding:0px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background:var(--base-color);
+  font-size:14px;
+  color: var(--black-color);
+  text-align:justify;
+  text-justify: inter-ideograph;
+  max-width:1000px;
+  user-select: none;
+}
+
+
+/* nav */
+nav{
+  background-color:var(--main-color);
+  height:60px;
+  position: fixed;
+  top:0px;
+  width:100%;
+  z-index: 999;
+  display: flex;
+justify-content: space-between;
+max-width: 1000px;
+}
+#target {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+.target_inner{
+  width: 40px;
+  height: 30px;
+  position: relative;
+}
+.target_inner_line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background: #636363;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  border-radius: 50px;
+  position: absolute;
+}
+.target_inner_1 {
+  top: 0;
+}
+.target_inner_2 {
+  top: 13px;
+}
+.target_inner_3 {
+  top: 26px;
+}
+.fadein{
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.linea,.lineb,.linec{
+    background: var(--black-color);
+}
+.linea {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+    top: 13px;
+}
+.lineb {
+    opacity: 0;
+}
+.linec {
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    top: 13px;
+}
+
+
+
+
+
+
+
+#logo{
+  margin-left:20px;
+  line-height:60px;
+  color:var(--base-color);
+font-size:20px;
+font-weight: bold;
+}
+
+#mask{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 99;
+  width:100%;
+  transform: translateX(0px);
+  transition-duration: 1s;
+  opacity: 1;
+  transition-timing-function: ease-in-out;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#mask.hidden{
+  transform: translateX(-600px);
+  transition-duration: 1s;
+  opacity: 0;
+  transition-timing-function: ease-in-out;
+}
+#mask_back{
+  background-color: var(--base2-color);
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+#mask_ul{
+  padding-top:100px;
+  position: absolute;
+}
+.mask_li{
+  height:0px;
+  text-align: left;
+  margin-left:20%;
+  font-size:20px;
+  width:100%;
+}
+.mask_li:hover{
+  color:black;
+}
+.mask_span{
+  font-size:14px;
+  margin-left:10px;
+}
+#mask a{
+  text-decoration: none;
+  color:var(--main-color);
+}

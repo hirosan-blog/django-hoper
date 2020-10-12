@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOPERの詳細｜HOPER</title>
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% endblock %}
+</head>
+<body>
+  
+  <nav>
+    <div id="logo">HOPER</div>
+    <div id="target">
+      <div class="target_inner">
+      <span class="target_inner_line target_inner_1" id="line1"></span>
+      <span class="target_inner_line target_inner_2" id="line2"></span>
+      <span class="target_inner_line target_inner_3" id="line3"></span>
+      </div>
+      </div>
+  </nav>
+  <div id="mask" class="hidden">
+    <div id="mask_back"></div>
+      <ul id="mask_ul">
+        <li class="mask_li"><a href="{% url 'index'%}">ホーム<span class="mask_span">HOME</span></a></li>
+        <li class="mask_li"><a href="{% url 'about'%}">HOPERについて<span class="mask_span">ABOUT</span></a></li>
+        <li class="mask_li"><a href="{% url 'teacher'%}">講師紹介<span class="mask_span">TEACHER</span></a></li>
+        <li class="mask_li"><a href="{% url 'plan'%}">料金プラン<span class="mask_span">PLAN</span></a></li>
+        <!-- <li class="mask_li"><a href="{% url 'index'%}">よくある質問<span class="mask_span">QUESTION</span></a></li> -->
+        <!-- <li class="mask_li"><a href="">お問い合わせ<span class="mask_span">CONTENT</span></a></li> -->
+      </ul>
+  </div>
+
+{% block main %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+  {% block extra_js %}
+  <script src="js/main.js"></script>
+  {% endblock %}
+</body>
