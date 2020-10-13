@@ -1,19 +1,11 @@
 {% extends "app/base.html" %}
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>専属コーチ吉武｜HOPER</title>
-  <link rel="stylesheet" href="css/teacher.css">
-</head>
-<body>
+{% load static %}
 
-  <nav>
-    <div id="logo">HOPER</div>
-    <div id="hamburger"><img src="img/32.png" alt="メニューアイコンです"></div>
-  </nav>
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/teacher.css' %}">
+{% endblock %}
 
+{% block main %}
 <div id="background">
   <div class="back-image0"></div>
   <div class="back-image1 back back_odd"></div>
@@ -110,6 +102,6 @@
 <a href="#" id="page_top">
   PAGE TOP
 </a>
-
+{%endblock%}
 </body>
 </html>

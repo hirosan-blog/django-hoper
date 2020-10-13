@@ -1,0 +1,45 @@
+
+/* header */
+#header_menu{
+  font-size:32px;
+  color:var(--main-color);
+  margin:140px 0px 80px;
+  text-align:center;
+}
+.list_menu{
+  height:36px;
+  list-style-type: none;
+  line-height:36px;
+  border:1px var(--black-color) solid; 
+  margin-bottom:12px;
+  color:var(--black-color);
+  text-align:left;
+  font-weight: bold;
+}
+.menu_span{
+  color:var(--main-color);
+  margin:0 15px 0 10px;
+  line-height: 36px;
+  font-weight: normal;
+}
+.menu_a{
+  color:var(--black-color);
+  text-decoration: none;
+  display: block;
+  height:36px;
+  width:100%;
+}
+
+
+
+
+
+section{
+  padding-top:60px;
+  width:85%;
+  margin:0 auto;
+}
+
+h1{
+  color:var(--main-color);
+}

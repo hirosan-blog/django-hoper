@@ -1,28 +1,19 @@
 {% extends "app/base.html" %}
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOPERの詳細｜HOPER</title>
-  <link rel="stylesheet" href="css/about.css">
-</head>
-<body>
+{% load static %}
 
-  <nav>
-    <div id="logo">HOPER</div>
-    <div id="hamburger"><img src="img/32.png" alt="メニューアイコンです"></div>
-  </nav>
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
 
-  
+{% block main %}
   <header>
     <h2 id="header_menu">HOPER</h2>
     <ul>
-      <li id="list1"><a href="#link1"><span>01</span>ビジョン</a></li>
-      <li id="list2"><a href="#link2"><span>02</span>HOPERの特徴</a></li>
-      <li id="list3"><a href="#link3"><span>03</span>生徒の声</a></li>
-      <li id="list4"><a href="#link4"><span>04</span>活動報告</a></li>
-      <li id="list5"><a href="#link5"><span>05</span>入会にあたって</a></li>
+      <li id="list1" class="list_menu"><a href="#link1" class="menu_a"><span class="menu_span">01</span>ビジョン</a></li>
+      <li id="list2" class="list_menu"><a href="#link2" class="menu_a"><span class="menu_span">02</span>HOPERの特徴</a></li>
+      <li id="list3" class="list_menu"><a href="#link3" class="menu_a"><span class="menu_span">03</span>生徒の声</a></li>
+      <li id="list4" class="list_menu"><a href="#link4" class="menu_a"><span class="menu_span">04</span>活動報告</a></li>
+      <li id="list5" class="list_menu"><a href="#link5" class="menu_a"><span class="menu_span">05</span>入会にあたって</a></li>
     </ul>
   </header>
 
@@ -39,8 +30,6 @@
   <section id="section2">
     <h1>｜HOPERの特徴</h1>
     <p>HOPER最大の特徴は「１人１人にコミットする」ということです。そのため、１シーズンの有料生徒数は最大３０名までとなっております。満員の場合は8月頃、３年生が引退と同時に入会が可能になります。
-    
-    
     </p>
   </section>
 
@@ -72,6 +61,7 @@
     <p>当塾の理念は選手ファストです。一人一人の人生にコミットし、どのような結果がまっていようとも、「後悔を絶対にさせない」ことが目標です。これは吉武自身、最後の夏の大会で3塁コーチャーの戦いにやぶれ、スタンドで応援していました。しかし、実力がなかった自分が100人を超える大所帯のなかで、ベンチ入りあらそうをできたことを誇りにおもい、悔いなく野球人生に幕を下ろすことができました。その経験から今現在は野球塾の専属コーチを任されています。
     </p>
   </section>
+  {% endblock %}
   
 </body>
 </html>

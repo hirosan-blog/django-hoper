@@ -1,5 +1,5 @@
-
 'use strict';
+
 {
 function hamburger() {
 document.getElementById('line1').classList.toggle('linea')

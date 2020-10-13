@@ -1,0 +1,333 @@
+
+/* 背景 */
+#background{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: -99;
+  width:100%;
+}
+.back{
+  padding:250px 0;
+}
+/* ここの大きさ変えるなら２倍した数字をsectionの画像とテキストにも加えないといけない */
+.back_odd{
+  position: relative;
+}
+.back_odd::before{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width:0;
+  height:0;
+  border-style: solid;
+  border-width: 0 100vw 50px 0;
+  border-color: transparent transparent var(--base2-color) transparent;
+}
+.back_even{
+  background:var(--base2-color);
+  position: relative;
+}
+.back_even::before{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width:0;
+  height:0;
+  border-style: solid;
+  border-width: 0 0 50px 100vw;
+  border-color: transparent transparent var(--base-color) transparent;
+}
+
+.back-image0{
+  padding:140px;
+  background:var(--base2-color);
+}
+
+.back-image1{
+  padding-top:300px;
+}
+
+
+
+
+/* header */
+#header_text{
+text-align:center;
+margin-top:120px;
+}
+#all_box{
+  display: grid;
+  grid-template-columns: 140px 140px;
+  width:80%;
+  justify-content: space-between;
+  margin:40px auto 0;
+}
+.box{
+  color:var(--black--color);
+  width:140px;
+  height:40px;
+  background:var(--base2-color);
+  font-weight:bold;
+  border:1px black solid;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height:40px;
+  box-shadow: 0px 1px 2px var(--black-color);
+}
+.box:active{
+background-color:var(--black-color);
+color:var(--base2-color);
+}
+.box a{
+  text-decoration: none;
+  color:var(--black-color);
+  width:140px;
+  height:40px;
+  display: block;
+}
+
+
+
+
+/* section1 */
+#section1{
+  display: flex;
+  justify-content: space-between;
+}
+#img_1{
+width:200px;
+height:282px;
+position: relative;
+margin-left:auto;
+z-index: -10;
+margin-top:73px;
+border-radius:5px;
+}
+#section1_text{
+  position: absolute;
+  width:65%;
+}
+#h1_1{
+  margin-top:150px;
+  margin-left:35px;
+}
+#p_1{
+  width:65%;
+  margin-left:35px;
+  background-color: rgba(255,255,255,0.3);
+}
+
+
+
+/* section2 */
+#section2{
+  display: flex;
+  justify-content: space-between;
+}
+#img_2{
+width:200px;
+height:282px;
+z-index: -10;
+margin-top:215px;
+border-radius:5px;
+position: absolute;
+/* z-index: 1; */
+}
+#section2_text{
+  text-align:right;
+  margin-top:275px;
+  /* z-index: 2; */
+}
+#p_2{
+  width:65%;
+  text-align:right;
+  margin-left:auto;
+  background-color: rgba(255,255,255,0.3);
+}
+
+
+
+
+/* section3 */
+#section3{
+  display: flex;
+  justify-content: space-between;
+  margin-top:130px;
+}
+#img_3{
+  width:200px;
+  height:282px;
+  position: relative;
+  right:0;
+  z-index: -10;
+  /* margin-top:715px; */
+  margin-left:auto;
+  border-radius:5px;
+  }
+  #section3_text{
+    position: absolute;
+    margin-top:100px;
+  }
+  #h1_3{
+    /* margin-top:800px; */
+    margin-left:35px;
+  }
+  #p_3{
+    margin-left:35px;
+    background-color: rgba(255,255,255,0.3);
+  }
+
+
+
+/* section4 */
+#section4{
+  display: flex;
+  /* width:1000px; */
+}
+#img_4{
+  width:200px;
+  height:282px;
+  z-index: -10;
+  margin-top:190px;
+  border-radius:5px;
+  position: absolute;
+  }
+  #text_4{
+    margin-top:245px;
+    text-align: right;
+    /* background-color: #fff; */
+    margin-right:10px;
+  }
+  #h1_4{
+  }
+  #p_4{
+    width:65%;
+    margin-left:auto;
+    text-align:right;
+    background-color: rgba(255,255,255,0.3);
+  }
+  
+img{
+  opacity: 0.7;
+}
+
+.back-image4::before{
+  content:"";
+  border-width: 0 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+  height:400px;
+  margin-top:100px;
+}
+
+#name{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#icon{
+  width:120px;
+  height: 120px;
+  border-radius:50%;
+  margin-left:10px;
+  background-image: url("../img/instagram/吉武photo.png");
+  background-size:cover;
+  border:1.5px #333 solid;
+}
+#my_set{
+  margin-left:30px;
+  margin-top:30px;
+}
+#my_name{
+  font-size:18px;
+  text-align: center;
+}
+#follow{
+  width:150px;
+  height:30px;
+  margin:30px auto 0px;
+  background-color: 	#00BFFF;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  font-family: sans-serif;
+  line-height:30px;
+  border-radius:3px;
+  font-size:13px;
+  display: block;
+  text-decoration: none;
+}
+#album{
+  display: grid;
+  grid-template-columns: 110px 110px 110px;
+  justify-content: space-between;
+  width:340px;
+  margin:0 auto 200px;
+}
+.pic{
+  width:110px;
+  height: 110px;
+  margin-bottom: 5px;
+  background-size: cover;
+}
+
+
+.pic1{
+  background-image: url("../img/instagram/IMG_5183.JPG");
+}
+.pic2{
+  background-image: url("../img/instagram/IMG_5184.JPG");
+}
+.pic3{
+  background-image: url("../img/instagram/IMG_5185.JPG");
+}
+.pic4{
+  background-image: url("../img/instagram/IMG_5186.JPG");
+}
+.pic5{
+  background-image: url("../img/instagram/IMG_5187.JPG");
+}
+.pic6{
+  background-image: url("../img/instagram/IMG_5188.JPG");
+}
+.pic7{
+  background-image: url("../img/instagram/IMG_5189.JPG");
+}
+.pic8{
+  background-image: url("../img/instagram/IMG_5190.JPG");
+}
+.pic9{
+  background-image: url("../img/instagram/IMG_5191.JPG");
+}
+
+#page_top{
+  width:200px;
+  height:45px;
+  background-color: var(--main-color);
+  margin:150px auto 0px;
+  line-height: 45px;
+  text-align: center;
+  color:var(--base-color);
+  font-size: 16px;
+  font-family: sans-serif;
+  display:block;
+  text-decoration: none;
+  /* transition:2s; */
+}

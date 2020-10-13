@@ -1,27 +1,17 @@
 {% extends "app/base.html" %}
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>料金プラン｜HOPER</title>
-  <link rel="stylesheet" href="css/plan.css">
-</head>
-<body>
+{% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/plan.css' %}">
+{% endblock %}
 
-  <nav>
-    <div id="logo">HOPER</div>
-    <div id="hamburger"><img src="img/32.png" alt="メニューアイコンです"></div>
-  </nav>
-
-
+{% block main %}
   <header>
     <h1>全プラン詳細</h1>
     <p>完全無料のクラスを始め、<br>
       専属型有料クラスまで存在します
     </p>
-    <a href="question.html" id="header_button">よくある質問</a>
+    <a href="{% url 'question' %}" id="header_button">よくある質問</a>
 
 
 <h2 id="graph">３プラン比較</h2>
@@ -85,7 +75,7 @@
       <li>無料動画の視聴</li>
       <li>打撃指導</li>
     </ul>
-    <a href="sign_up.html" class="button">申込をする</a>
+    <a href="{% url 'sign_up' %}" class="button">申込をする</a>
     <a href="">機能詳細</a>
     <a href="">ご利用規約</a>
     </div>
@@ -105,7 +95,7 @@
         <li>生徒同志が繋がることができる</li>
         <li>打撃指導</li>
       </ul>
-      <a href="sign_up.html" class="button">申込をする</a>
+      <a href="{% url 'sign_up' %}" class="button">申込をする</a>
       <a href="">機能詳細</a>
       <a href="">ご利用規約</a>
     </div>
@@ -126,13 +116,13 @@
         <li>生徒同志が繋がることができる</li>
         <li>打撃指導</li>
       </ul>
-      <a href="sign_up.html" class="button">申込をする</a>
+      <a href="{% url 'sign_up' %}" class="button">申込をする</a>
       <a href="">機能詳細</a>
       <a href="">ご利用規約</a>
     </div>
   </section>
 
 
-
+{%endblock%}
 </body>
 </html>

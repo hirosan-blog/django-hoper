@@ -18,3 +18,11 @@ class TeacherView(View):
 class PlanView(View):
   def get(self,request,*args,**kwargs):
     return render(request,'app/plan.html')
+
+class SignUpView(View):
+  def get(self,request,*args,**kwargs):
+    return render(request,'app/sign_up.html')
+
+class QuestionView(View):
+  def get(self,request,*args,**kwargs):
+    return render(request,'app/question.html')
