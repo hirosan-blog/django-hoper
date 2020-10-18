@@ -31,6 +31,14 @@ nav{
 justify-content: space-between;
 max-width: 1000px;
 }
+#logo{
+  margin-left:20px;
+  line-height:60px;
+  color:var(--base-color);
+font-size:20px;
+font-weight: bold;
+text-decoration: none;
+}
 #target {
   width: 40px;
   height: 30px;
@@ -52,8 +60,8 @@ max-width: 1000px;
   width: 40px;
   height: 5px;
   background: #636363;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-radius: 50px;
   position: absolute;
 }
@@ -88,13 +96,8 @@ max-width: 1000px;
 }
 
 
-#logo{
-  margin-left:20px;
-  line-height:60px;
-  color:var(--base-color);
-font-size:20px;
-font-weight: bold;
-}
+
+
 
 #mask{
   position: fixed;
@@ -104,21 +107,40 @@ font-weight: bold;
   right:0;
   z-index: 99;
   width:100%;
-  transform: translateX(0px);
-  transition-duration: 1s;
-  opacity: 1;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   max-width: 1000px;
   margin: 0 auto;
+  display: block;
+  animation: show 0.3s linear;
 }
 #mask.hidden{
-  transform: translateX(-600px);
-  transition-duration: 1s;
-  opacity: 0;
-  transition-timing-function: ease-in-out;
+  animation:move 0.3s ease-in-out;
+  display: none;
 }
+@keyframes show{
+  from{
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+@keyframes move{
+  0%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100%{
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+}
+
 #mask_back{
-  background-color: var(--base2-color);
+  background-color: var(--base-color);
   position: fixed;
   top:0;
   bottom:0;
@@ -135,6 +157,9 @@ font-weight: bold;
   margin-left:20%;
   font-size:20px;
   width:100%;
+  list-style-type: none;
+  padding:40px 0;
+  margin-left:0px;
 }
 .mask_li:hover{
   color:black;
@@ -146,4 +171,5 @@ font-weight: bold;
 #mask a{
   text-decoration: none;
   color:var(--main-color);
+
 }

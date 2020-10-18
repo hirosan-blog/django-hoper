@@ -1,3 +1,4 @@
+
 #header_container{
   margin-top:60px;
   height:330px;
@@ -88,21 +89,22 @@ color:var(--black-color);
 
 
 
-/* ul  */
-ul{
+/* ul */
+#main_ul{
   margin:0;
   padding:0;
   background-color:var(--base2-color);
-} 
+}
 
-li{
+
+.main_li{
   list-style-type:none;
   width:55%;
   margin:0 auto;
   height:250px;
   padding:40px 0;
   text-align:center;
-} 
+}
 
 #li3{
   position: relative;
@@ -126,7 +128,7 @@ li{
   text-decoration: none;
 }
 
-li p{
+.main_li p{
   font-size:14px;
   padding:10px 0 30px;
 }
@@ -192,4 +194,4 @@ footer a{
   text-align: center;
   /* color:blue; */
   padding:20px 0;
-}
+} 

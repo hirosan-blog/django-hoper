@@ -1,4 +1,5 @@
 
+
 /* 背景 */
 #background{
   position: absolute;
@@ -93,6 +94,12 @@ color:var(--base2-color);
 }
 
 
+.section_img{
+  background-size: cover;
+  opacity: .7;
+  background-position:center;
+}
+
 
 
 /* section1 */
@@ -108,6 +115,8 @@ margin-left:auto;
 z-index: -10;
 margin-top:73px;
 border-radius:5px;
+background-image: url("../img/yoshitake/yoshitake投手200\ _\ 260.jpg");
+opacity: .7;
 }
 #section1_text{
   position: absolute;
@@ -137,7 +146,8 @@ z-index: -10;
 margin-top:215px;
 border-radius:5px;
 position: absolute;
-/* z-index: 1; */
+background-image: url("../img/yoshitake/yoshitake素振り200\ _\ 260.jpg");
+opacity: .7;
 }
 #section2_text{
   text-align:right;
@@ -169,6 +179,7 @@ position: absolute;
   /* margin-top:715px; */
   margin-left:auto;
   border-radius:5px;
+  background-image: url("../img/yoshitake/yoshitake授業200\ _\ 260.jpg");
   }
   #section3_text{
     position: absolute;
@@ -197,6 +208,7 @@ position: absolute;
   margin-top:190px;
   border-radius:5px;
   position: absolute;
+  background-image: url("../img/yoshitake/qgxan0jRo0CmmBI1602637301.jpg");
   }
   #text_4{
     margin-top:245px;

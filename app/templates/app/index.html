@@ -6,66 +6,65 @@
 {% endblock %}
 
 {% block main %}
-  <header>
-    <div id="header_container">
-    <div id="header_text">
-      <h3 id="header_h3">ここに文章を入れる</h3>
-      <h1 id="header_h1">Enter sentences in here</h1>
-    </div>
-  </header>
+<header>
+  <div id="header_container">
+  <div id="header_text">
+    <h3 id="header_h3">ここに文章を入れる</h3>
+    <h1 id="header_h1">Enter sentences in here</h1>
+  </div>
+</header>
 
 
-  <div id="inpact">
-    <h1 id="academy">Academy</h1>
-    <div id="gold">
-      <h1 id="first_inpact"><span class="header_span">ベンチ入り</span>に特化</h1>
-      <h1 id="second_inpact">完全<span class="header_span">オンライン野球塾</span></h1>
-    </div>
-    <p>
-      HOPERは「ベンチ入ること」が目標の生徒が集まる特化型オンライン野球塾です。<br>
-      代打・代走・守備固め・コーチャー等、個人の目標に応じて、<br>専属コーチである吉武が選手と一緒に戦略を練り、ベンチに入るため完全サポートをします。
+<div id="inpact">
+  <h1 id="academy">Academy</h1>
+  <div id="gold">
+    <h1 id="first_inpact"><span class="header_span">ベンチ入り</span>に特化</h1>
+    <h1 id="second_inpact">完全<span class="header_span">オンライン野球塾</span></h1>
+  </div>
+  <p>
+    HOPERは「ベンチ入ること」が目標の生徒が集まる特化型オンライン野球塾です。<br>
+    代打・代走・守備固め・コーチャー等、個人の目標に応じて、<br>専属コーチである吉武が選手と一緒に戦略を練り、ベンチに入るため完全サポートをします。
+  </p>
+</div>
+
+
+
+<ul id="main_ul">
+  <li id="li1" class="main_li">
+    <h1 class="sub_title">ABOUT</h1>
+    <p>HOPERの理念・ビジョンなどを<br>詳しく紹介しております。<br>
     </p>
-  </div>
+    <a href="{% url 'about' %}" class=botton>もっと見る</a>
+  </li>
+
+<div id="list_par">
+  <li id="li2" class="main_li">
+    <h1 class="sub_title">TEACHER</h1>
+    <p>HOPER専属コーチである吉武を<br>
+    詳しく紹介しております。</p>
+    <a href="{% url 'teacher' %}" class="botton even_btn">もっと見る</a>
+  </li>
+</div>
+
+  <li id="li3" class="main_li">
+    <h1 class="sub_title">PLAN</h1>
+    <p>無料プランをはじめ、３種類の<br>プランをご用意しております。</p>
+    <a href="{% url 'plan' %}" class=botton>もっと見る</a>
+  </li>
 
 
 
-  <ul>
-    <li id="li1">
-      <h1 class="sub_title">ABOUT</h1>
-      <p>HOPERの理念・ビジョンなどを<br>詳しく紹介しております。<br>
-      </p>
-      <a href="{% url 'about' %}" class=botton>もっと見る</a>
-    </li>
-
-  
-  <div id="list_par">
-    <li id="li2">
-      <h1 class="sub_title">TEACHERT</h1>
-      <p>HOPER専属コーチである吉武を<br>
-      詳しく紹介しております。</p>
-      <a href="{% url 'teacher'%}" class="botton even_btn">もっと見る</a>
-    </li>
-  </div>
-  
-    <li id="li3">
-      <h1 class="sub_title">PLAN</h1>
-      <p>無料プランをはじめ、３種類の<br>プランをご用意しております。</p>
-      <a href="{% url 'plan'%}" class=botton>もっと見る</a>
-    </li>
-
-
-
-  <footer>
-    <div id="footer_container">
-    <h1 class="sub_title">CONTACT</h1>
-    <p>ご意見・ご質問など、お問い合わせは、<br>下記フォームからお願いいたします。</p>
-    <div class="li4_botton botton1">お問いあわせ</div>
-    <a href="question.html" class="li4_botton">よくある質問</a>
-    <a id="footer_a_first">特定商取引法に基づく表記</a>
-    <a id="footer_a_second">プライバシーポリシー</a>
-    <div id="contact">(c) HOPER.com</div>
-  </div>
-  </footer>
+<footer>
+  <div id="footer_container">
+  <h1 class="sub_title">CONTACT</h1>
+  <p>ご意見・ご質問など、お問い合わせは、<br>下記フォームからお願いいたします。</p>
+  <div class="li4_botton botton1">お問いあわせ</div>
+  <a href="{% url 'question' %}" class="li4_botton">よくある質問</a>
+  <a id="footer_a_first">特定商取引法に基づく表記</a>
+  <a id="footer_a_second">プライバシーポリシー</a>
+  <div id="contact">(c) HOPER.com</div>
+</div>
+</footer>
 {% endblock %}
 
 
