@@ -1,13 +1,12 @@
 from django.conf import settings
 from django.db import models
 
-class User(models.Model):
-  lastname = models.CharField("姓名",max_length=10)
-  firstname = models.CharField("名前",max_length=20)
-  address = models.CharField("住所",max_length=30)
-  team = models.CharField("所属チーム",max_length=30)
-  number = models.CharField("電話番号",max_length=20)
-  mail = models.CharField("メール",max_length=30)
+class Hoper(models.Model):
+  vision_content = models.TextField("ビジョン文章")
+  feature_content = models.TextField("特徴文章")
+  student_content = models.TextField("生徒文章")
+  action_content = models.TextField("活動報告文章")
+  join_content = models.TextField("入会文章")
 
 
 def __str__(self):

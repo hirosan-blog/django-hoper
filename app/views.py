@@ -1,6 +1,6 @@
 from django.views.generic import View
 from django.shortcuts import render
-# from .models import Post
+from .models import Hoper
 # Create your views here.
 
 class IndexView(View):
@@ -9,7 +9,11 @@ class IndexView(View):
 
 class AboutView(View):
   def get(self,request,*args,**kwargs):
-    return render(request,'app/about.html')
+    hoper_data = Hoper.objects.all()
+    if hoper_data.exists():
+            hoper_data = hoper_data.order_by("-id")[0]
+    return render(request,'app/about.html',
+    {"hoper_data" : hoper_data})
 
 class TeacherView(View):
   def get(self,request,*args,**kwargs):
