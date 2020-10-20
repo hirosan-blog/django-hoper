@@ -179,9 +179,14 @@ footer p{
 
 #footer_a_first{
   margin-bottom:20px;
+  text-decoration: none;
+  color:#515151;
+
 }
 #footer_a_second{
   margin-bottom:25px;
+  text-decoration: none;
+  color:#515151;
 }
 footer a{
   text-decoration: underline;

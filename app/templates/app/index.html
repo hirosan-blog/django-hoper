@@ -58,10 +58,10 @@
   <div id="footer_container">
   <h1 class="sub_title">CONTACT</h1>
   <p>ご意見・ご質問など、お問い合わせは、<br>下記フォームからお願いいたします。</p>
-  <div class="li4_botton botton1">お問いあわせ</div>
   <a href="{% url 'question' %}" class="li4_botton">よくある質問</a>
-  <a id="footer_a_first">特定商取引法に基づく表記</a>
-  <a id="footer_a_second">プライバシーポリシー</a>
+  <a href="{% url 'contact' %}" class="li4_botton botton1">お問いあわせ</a>
+  <a href="{% url 'law' %}" id="footer_a_first">特定商取引法に基づく表記</a>
+  <a href="{% url 'privacy' %}" id="footer_a_second">プライバシーポリシー</a>
   <div id="contact">(c) HOPER.com</div>
 </div>
 </footer>

@@ -8,6 +8,3 @@ class Hoper(models.Model):
   action_content = models.TextField("活動報告文章")
   join_content = models.TextField("入会文章")
 
-
-def __str__(self):
-  return self.title

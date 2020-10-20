@@ -1,0 +1,35 @@
+{% extends "app/base.html" %}
+{% load widget_tweaks %}
+{% load static %}
+
+
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block main %}
+</h1>
+<div class="card text-center contact mx-auto rounded">
+    <div class="card-body">
+        <h2 class="mb-4">お問い合わせ</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {% render_field form.name class="form-control" placeholder="名前" %}
+            </div>
+            <div class="mb-3">
+                {% render_field form.email class="form-control" placeholder="メールアドレス" %}
+            </div>
+            <div class="mb-3">
+                {% render_field form.message class="form-control" placeholder="お問い合わせ内容" %}
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane"></i> 送信する</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

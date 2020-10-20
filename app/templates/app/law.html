@@ -1,0 +1,27 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block css %}
+<style>
+  body{
+    padding:100px 0;
+  }
+  h1{
+    text-align: center;
+    font-size: 22px;
+  }
+</style>
+{% endblock %}
+
+
+{% block main %}
+<div id="law_container"><h1>【特定商取引法に基づく表記】</h1><table bgcolor="#999999" border="0" cellpadding="9" cellspacing="1" style="font-size:13px;text-align:left"> <tr><th bgcolor="#EEEEEE">販売塾名</th><td bgcolor="#FFFFFF">オンライン野球塾HOPER</td></tr> <tr><th bgcolor="#EEEEEE">運営統括責任者</th><td bgcolor="#FFFFFF">吉武　綾太</td></tr> <tr><th bgcolor="#EEEEEE">所在地</th><td bgcolor="#FFFFFF">東京都八王子市高倉町５６-３２</td></tr> <tr><th bgcolor="#EEEEEE">電話番号</th><td bgcolor="#FFFFFF">０８０-３４９０-０４３０
+</td></tr> <tr><th bgcolor="#EEEEEE">メールアドレス</th><td bgcolor="#FFFFFF"> yakyu8342@yahoo.ne.jp</td></tr> <tr><th bgcolor="#EEEEEE">販売URL</th><td bgcolor="#FFFFFF"><a href="{% url 'plan' %}">料金プランページ</a>
+</td></tr> <tr><th bgcolor="#EEEEEE">お支払い方法</th><td bgcolor="#FFFFFF">paypal<br />LINEpay<br /></td></tr> <tr><th bgcolor="#EEEEEE">商品代金外の<br />必要金額</th><td bgcolor="#FFFFFF">銀行振り込みを選択された場合、手数料が発生するケースがあります。</td></tr> <tr><th bgcolor="#EEEEEE">有効期限</th><td bgcolor="#FFFFFF">ご決済時から１ヶ月間サービスをご利用いただけます。</td></tr> 
+
+<!-- <tr><th bgcolor="#EEEEEE">商品引渡し時期</th>
+
+  <td bgcolor="#FFFFFF">前払いの場合、指定日が無ければ入金確認後●営業日以内で発送致します。<br />代引の場合、指定日が無ければご注文確認後●日営業日以内で発送致します。<br />その他の支払方法の場合、指定日が無ければご注文後●日営業日以内で発送致します。<br />後払いの場合、商品到着後●日以内にご入金ください。<br /> </td></tr> -->
+  
+  <tr><th bgcolor="#EEEEEE">商品引渡し方法</th><td bgcolor="#FFFFFF">無料プランはLINE登録後、有料プランはご決済後にサービスのご利用が可能になります。</td></tr> <tr><th bgcolor="#EEEEEE">返品について</th><td bgcolor="#FFFFFF">全額返金精度がございます。<br>理由を問わず、返金を希望されるお客様には全額返金いたしております。</td></tr> <tr><th bgcolor="#EEEEEE">表現、及び商品に<br />関する注意書き</th><td bgcolor="#FFFFFF">講師と生徒間での相性もございますので、有料プランに加入の前に、まずは無料プランのお試しを推奨しております。</td></table></div>
+{% endblock %}

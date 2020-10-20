@@ -76,8 +76,8 @@
       <li>打撃指導</li>
     </ul>
     <a href="{% url 'sign_up' %}" class="button">申込をする</a>
-    <a href="">機能詳細</a>
-    <a href="">ご利用規約</a>
+    <!-- <a href="">機能詳細</a> -->
+    <a href="{% url 'use' %}">ご利用規約</a>
     </div>
   </section>
 
@@ -95,9 +95,16 @@
         <li>生徒同志が繋がることができる</li>
         <li>打撃指導</li>
       </ul>
-      <a href="{% url 'sign_up' %}" class="button">申込をする</a>
-      <a href="">機能詳細</a>
-      <a href="">ご利用規約</a>
+      <!-- <a href="{% url 'sign_up' %}" class="button">申込をする</a> -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="UC6EM2679G5WU">
+        <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - オンラインでより安全・簡単にお支払い">
+        <img alt="" border="0" src="https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        
+      <!-- <a href="">機能詳細</a> -->
+      <a href="{% url 'use' %}">ご利用規約</a>
     </div>
   </section>
 
@@ -117,8 +124,8 @@
         <li>打撃指導</li>
       </ul>
       <a href="{% url 'sign_up' %}" class="button">申込をする</a>
-      <a href="">機能詳細</a>
-      <a href="">ご利用規約</a>
+      <!-- <a href="">機能詳細</a> -->
+      <a href="{% url 'use' %}">ご利用規約</a>
     </div>
   </section>
 

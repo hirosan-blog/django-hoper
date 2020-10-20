@@ -115,7 +115,6 @@ text-decoration: none;
   animation: show 0.3s linear;
 }
 #mask.hidden{
-  animation:move 0.3s ease-in-out;
   display: none;
 }
 @keyframes show{
@@ -173,3 +172,21 @@ text-decoration: none;
   color:var(--main-color);
 
 }
+
+
+
+
+/* contact */
+
+/* .contact {
+  max-width: 500px;
+}
+
+.form-control:focus {
+  border-color: #EE6C4D;
+  box-shadow: none;
+}
+
+.card {
+  border: none;
+} */
