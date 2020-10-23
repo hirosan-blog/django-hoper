@@ -26,31 +26,37 @@
   </thead>
   <tbody>
     <tr>
-      <td>専属サポート</td>
+      <td>個別相談(LINE)</td>
       <td>◯</td>
       <td>◯</td>
       <td>◯</td>
     </tr>
     <tr>
-      <td>LINE質問</td>
+      <td>メールマガジン</td>
       <td>◯</td>
       <td>◯</td>
-      <td>◯</td>
-    </tr>
-    <tr>
-      <td>メニュー作成</td>
-      <td>×</td>
-      <td>◯</td>
-      <td>◯</td>
-    </tr>
-    <tr>
-      <td>直接レッスン</td>
-      <td>×</td>
-      <td>×</td>
       <td>◯</td>
     </tr>
     <tr>
       <td>電話相談</td>
+      <td>×</td>
+      <td>◯</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>動画指導</td>
+      <td>×</td>
+      <td>◯</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>練習プラン作成</td>
+      <td>×</td>
+      <td>◯</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>直接指導</td>
       <td>×</td>
       <td>×</td>
       <td>◯</td>
@@ -70,13 +76,32 @@
     幅広い人向けの発信</p>
     <h1>￥0／月（税込）</h1>
     <ul>
+      <li>LINE質問・相談</li>
       <li>ラインマガジン配信</li>
-      <li>ラインでも質問</li>
-      <li>無料動画の視聴</li>
-      <li>打撃指導</li>
+      <li>無料プランへの登録は、公式LINEの友達追加をもって完了となります。</li>
     </ul>
     <a href="{% url 'sign_up' %}" class="button">申込をする</a>
     <!-- <a href="">機能詳細</a> -->
+    <!-- <div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=ATYs3NECYd-cN3I8PYQ7EbGQuNQShgYmSf7ZO0HLHN8wA4ridZL542iNDrfygCc_VcdDLxPT7FEusxGZ&vault=true" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'white',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          'plan_id': 'P-0VD437979B169981JL6JCAYY'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID);
+      }
+  }).render('#paypal-button-container');
+</script> -->
     <a href="{% url 'use' %}">ご利用規約</a>
     </div>
   </section>
@@ -89,20 +114,33 @@
       幅広い人向けの発信</p>
       <h1>￥2980／月（税込）</h1>
       <ul>
-        <li>スタンダートコース</li>
-        <li>ラインマガジンの配信</li>
-        <li>技術情報の取得</li>
-        <li>生徒同志が繋がることができる</li>
-        <li>打撃指導</li>
+        <li>LINE質問・相談</li>
+        <li>ラインマガジン配信</li>
+        <li>動画指導</li>
+        <li>電話相談</li>
+        <li>ご希望の方は練習プラン作成</li>
       </ul>
       <!-- <a href="{% url 'sign_up' %}" class="button">申込をする</a> -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="UC6EM2679G5WU">
-        <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - オンラインでより安全・簡単にお支払い">
-        <img alt="" border="0" src="https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif" width="1" height="1">
-        </form>
-        
+      <div id="paypal-button-container"></div>
+      <script src="https://www.paypal.com/sdk/js?client-id=ATYs3NECYd-cN3I8PYQ7EbGQuNQShgYmSf7ZO0HLHN8wA4ridZL542iNDrfygCc_VcdDLxPT7FEusxGZ&vault=true" data-sdk-integration-source="button-factory"></script>
+      <script>
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'white',
+                layout: 'vertical',
+                label: 'subscribe'
+            },
+            createSubscription: function(data, actions) {
+              return actions.subscription.create({
+                'plan_id': 'P-73A75313HX396183CL6JB62Q'
+              });
+            },
+            onApprove: function(data, actions) {
+              alert(data.subscriptionID);
+            }
+        }).render('#paypal-button-container');
+      </script>
       <!-- <a href="">機能詳細</a> -->
       <a href="{% url 'use' %}">ご利用規約</a>
     </div>
@@ -116,14 +154,14 @@
       幅広い人向けの発信</p>
       <h1>￥8980／月（税込）</h1>
       <ul>
-        <li>有料テキスト(14800円で販売していたもの)
-          の閲覧</li>
-        <li>専属電話対応</li>
-        <li>オリジナル練習プランの作成</li>
-        <li>生徒同志が繋がることができる</li>
-        <li>打撃指導</li>
+        <li>LINE質問・相談</li>
+        <li>ラインマガジン配信</li>
+        <li>動画指導</li>
+        <li>電話相談</li>
+        <li>ご希望の方は練習プラン作成</li>
+        <li>直接指導（指導内容によって練習場所は相談）</li>
       </ul>
-      <a href="{% url 'sign_up' %}" class="button">申込をする</a>
+      <p>スタンダートプランに既に加入しているお客様が対象になります。プレミアムプランに加入を希望される方は、公式LINEより、プレミアムプランへのアップグレード申請を行ってください。</p>
       <!-- <a href="">機能詳細</a> -->
       <a href="{% url 'use' %}">ご利用規約</a>
     </div>
