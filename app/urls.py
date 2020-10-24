@@ -13,4 +13,5 @@ urlpatterns = [
   path('law/', views.LawView.as_view(), name='law'),
   path('privacy/', views.PrivacyView.as_view(), name='privacy'),
   path('use/', views.UseView.as_view(), name='use'),
+  path('line/', views.LineView.as_view(), name='line'),
 ]

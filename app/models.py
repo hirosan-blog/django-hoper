@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 
-class Hoper(models.Model):
+class About(models.Model):
   vision_content = models.TextField("ビジョン文章")
   feature_content = models.TextField("特徴文章")
   student_content = models.TextField("生徒文章")

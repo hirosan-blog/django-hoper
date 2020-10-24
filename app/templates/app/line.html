@@ -1,0 +1,38 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block css %}
+<style>
+  body{
+    margin-top:300px
+  }
+#price_btn{
+  width:160px;
+  height:40px;
+  border-radius:5px;
+  border:2px #515151 solid;
+  line-height:40px;
+  margin:25px auto;
+  text-decoration: none;
+  color:var(--black-color);
+  display: block;
+  text-align: center;
+}
+#container{
+  width:90%;
+  margin:0 auto;
+};
+</style>
+{% endblock %}
+
+{% block main %}
+<div id="container">
+<p>入会申請ありがとうございます。</p>
+<p>①下のボタンより、公式LINEの登録をよろしくお願いします。</p>
+<p>②公式LINEの追加、または既に追加済みの方はメッセージより、プランの申請をよろしくお願いします。</p>
+<p>例）無料コースを体験します<br>
+例）スタンダートコースへの入会を希望します</p>
+<a href="https://lin.ee/fyARPq1" id="price_btn">LINE
+登録</a>
+</div>
+{% endblock %}

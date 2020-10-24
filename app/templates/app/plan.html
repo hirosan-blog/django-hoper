@@ -80,7 +80,7 @@
       <li>ラインマガジン配信</li>
       <li>無料プランへの登録は、公式LINEの友達追加をもって完了となります。</li>
     </ul>
-    <a href="{% url 'sign_up' %}" class="button">申込をする</a>
+    <a href="{% url 'line' %}" class="button">申込をする</a>
     <!-- <a href="">機能詳細</a> -->
     <!-- <div id="paypal-button-container"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=ATYs3NECYd-cN3I8PYQ7EbGQuNQShgYmSf7ZO0HLHN8wA4ridZL542iNDrfygCc_VcdDLxPT7FEusxGZ&vault=true" data-sdk-integration-source="button-factory"></script>
@@ -120,8 +120,8 @@
         <li>電話相談</li>
         <li>ご希望の方は練習プラン作成</li>
       </ul>
-      <!-- <a href="{% url 'sign_up' %}" class="button">申込をする</a> -->
-      <div id="paypal-button-container"></div>
+      <a href="{% url 'line' %}" class="button">申込をする</a>
+      <!-- <div id="paypal-button-container"></div>
       <script src="https://www.paypal.com/sdk/js?client-id=ATYs3NECYd-cN3I8PYQ7EbGQuNQShgYmSf7ZO0HLHN8wA4ridZL542iNDrfygCc_VcdDLxPT7FEusxGZ&vault=true" data-sdk-integration-source="button-factory"></script>
       <script>
         paypal.Buttons({
@@ -140,7 +140,7 @@
               alert(data.subscriptionID);
             }
         }).render('#paypal-button-container');
-      </script>
+      </script> -->
       <!-- <a href="">機能詳細</a> -->
       <a href="{% url 'use' %}">ご利用規約</a>
     </div>
@@ -161,8 +161,9 @@
         <li>ご希望の方は練習プラン作成</li>
         <li>直接指導（指導内容によって練習場所は相談）</li>
       </ul>
-      <p>スタンダートプランに既に加入しているお客様が対象になります。プレミアムプランに加入を希望される方は、公式LINEより、プレミアムプランへのアップグレード申請を行ってください。</p>
+      <!-- <p>スタンダートプランに既に加入しているお客様が対象になります。プレミアムプランに加入を希望される方は、公式LINEより、プレミアムプランへのアップグレード申請を行ってください。</p> -->
       <!-- <a href="">機能詳細</a> -->
+      <a href="{% url 'line' %}" class="button">申込をする</a>
       <a href="{% url 'use' %}">ご利用規約</a>
     </div>
   </section>
