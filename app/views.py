@@ -1,11 +1,12 @@
 from django.views.generic import View
 from django.shortcuts import render
-from .models import About
-# Create your views here.
+from .models import About,TopMessage,Teacher,Plan,PlanContentsCategory,QuestionCategory,Question
 
 class IndexView(View):
   def get(self,request,*args,**kwargs):
-    return render(request,'app/index.html')
+    top_messages = TopMessage.objects.all()
+    top_message = top_messages[0]
+    return render(request,'app/index.html',{"top_message":top_message})
 
 class AboutView(View):
   def get(self,request,*args,**kwargs):
@@ -17,11 +18,19 @@ class AboutView(View):
 
 class TeacherView(View):
   def get(self,request,*args,**kwargs):
-    return render(request,'app/teacher.html')
+    teacher_data = Teacher.objects.order_by("-id")
+    teacher = teacher_data[0]
+    return render(request,'app/teacher.html',{"teacher":teacher})
     
 class PlanView(View):
   def get(self,request,*args,**kwargs):
-    return render(request,'app/plan.html')
+    plan_data = Plan.objects.order_by("id")
+    plan_list = PlanContentsCategory.objects.order_by("id")
+    pl = plan_data[0]
+    return render(request,'app/plan.html',{
+      "plan_data":plan_data,
+      "plan_list":plan_list,
+      })
 
 class SignUpView(View):
   def get(self,request,*args,**kwargs):
@@ -29,7 +38,12 @@ class SignUpView(View):
 
 class QuestionView(View):
   def get(self,request,*args,**kwargs):
-    return render(request,'app/question.html')
+    question_title = QuestionCategory.objects.order_by("id")
+    question_set = Question.objects.all()
+    return render(request,'app/question.html',{
+      "question_title":question_title,
+      "question_set":question_set,
+      })
 
 class LawView(View):
   def get(self,request,*args,**kwargs):

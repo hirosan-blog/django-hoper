@@ -12,13 +12,13 @@
   <div class="back-image2 back back_even"></div>
   <div class="back-image3 back back_odd"></div>
   <div class="back-image4 back back_even"></div>
-  <!-- <div class="back-image5 back back_odd"></div> -->
 </div>
-;
+
 <header>
   <div id="header_text">
     <h3 id="subtitle">HOPER専属コーチ</h3>
     <h1 id="title">Yoshitake</h1>
+    <div><a href="https://yakyu8342.hatenablog.com/entry/yoshi">Yoshitake Blog</a></div>
   </div>
   <div id="all_box">
     <div class="box1 box"><a href="#link1">思い</a></div>
@@ -33,12 +33,9 @@
 <secition id="section1">
   <div id="section1_text">
     <h1 id="h1_1">｜思い</h1>
-    <p id="p_1" class="teacher_p">私の高校は入学時１２８名の選手が在籍する、甲子園出場経験もある強豪校でした。技術も才能もない私はたくさんの挫折を味わいました。<br>
-      スタンドの屈辱感、グラウンドに立つことの幸福感。どちらも知っています<br>
-      当塾では、過去の私のような「ベンチ入りが絶望的」な選手でも這い上がることができるように
-      マンツーマンでサポートしています。<br>
-      一緒に頑張りましょう。
-      </p>
+    <p id="p_1" class="teacher_p">
+      {{ teacher.think|linebreaksbr  }}
+    </p>
   </div>
   <div id="img_1" class="section_img"></div>
 </secition>
@@ -49,7 +46,9 @@
   <div id="img_2" class="section_img"></div>
   <div id="section2_text">
     <h1 id="h1_2">経歴｜</h1>
-    <p id="p_2" class="teacher_p">中高生を中心に200名以上を指導。<br>現在はクラブチームのコーチ、八王子市内の野球塾で小学生に指導、HOPER専属コーチとして活動しております。
+    <p id="p_2" class="teacher_p">
+      {{ teacher.history|linebreaksbr  }}
+    </p>
   </div>
 </secition>
 
@@ -59,10 +58,7 @@
   <div id="section3_text">
     <h1 id="h1_3">｜プロフィール</h1>
     <p id="p_3" class="teacher_p">
-      ・東京日野シニア卒業（2015年）<br>
-      ・日大鶴ヶ丘高校卒業（2018年）<br>
-      ・クラブチーム指導者(2018年)<br>
-      ・HOPER専属コーチ就任(2019年)
+      {{ teacher.profile|linebreaksbr }}
     </p>
   </div>
   <div id="img_3" class="section_img"></div>
@@ -74,7 +70,9 @@
   <div id="img_4" class="section_img"></div>
   <div id="text_4">
     <h1 id="h1_4">プライベート｜</h1>
-    <p id="p_4" class="teacher_p">吉武が最も大事にすることの一つに「信頼関係」があります。そのため吉武のインスタグラムでは、技術指導だけではなく、プライベートな内容も随時発信しておりますので、よろしければ下のフォローボタンにお進みください</p>
+    <p id="p_4" class="teacher_p">
+      {{ teacher.private|linebreaksbr }}
+    </p>
   </div>
 </secition>
 
@@ -102,9 +100,6 @@
 </div>
 </footer>
 
-<a href="#" id="page_top">
-  PAGE TOP
-</a>
 {%endblock%}
 </body>
 </html>

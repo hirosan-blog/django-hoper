@@ -6,9 +6,9 @@
 {% endblock %}
 
 {% block main %}
-  <header>
+  <header id="plan_header">
     <h1>全プラン詳細</h1>
-    <p>完全無料のクラスを始め、<br>
+    <p id="plan_header_p">完全無料のクラスを始め、<br>
       専属型有料クラスまで存在します
     </p>
     <a href="{% url 'question' %}" id="header_button">よくある質問</a>
@@ -66,109 +66,25 @@
 </header>
 
 
-
-
-
-  <section id="section1">
+{% for plan in plan_data %}
+  <section class="plan_section">
     <div class="text_set">
-    <h1>無料プラン</h1>
-    <p>まずはHOPERを体験してみたい方向け
-    幅広い人向けの発信</p>
-    <h1>￥0／月（税込）</h1>
+    <h1>{{ plan.name }}</h1>
+    <p>{{ plan.explanation }}
+    </p>
+    <h1>￥{{ plan.price }}／月（税込）</h1>
     <ul>
-      <li>LINE質問・相談</li>
-      <li>ラインマガジン配信</li>
-      <li>無料プランへの登録は、公式LINEの友達追加をもって完了となります。</li>
+      {% for list in plan_list %}
+      {% if list.parent == plan %}
+      <li class="plan_list">{{ list.name }}</li>
+      {% endif %}
+      {% endfor %}
     </ul>
-    <a href="{% url 'line' %}" class="button">申込をする</a>
-    <!-- <a href="">機能詳細</a> -->
-    <!-- <div id="paypal-button-container"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=ATYs3NECYd-cN3I8PYQ7EbGQuNQShgYmSf7ZO0HLHN8wA4ridZL542iNDrfygCc_VcdDLxPT7FEusxGZ&vault=true" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'rect',
-          color: 'white',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          'plan_id': 'P-0VD437979B169981JL6JCAYY'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID);
-      }
-  }).render('#paypal-button-container');
-</script> -->
-    <a href="{% url 'use' %}">ご利用規約</a>
+    <a href="{% url 'line' %}" class="plan_list_btn">申込をする</a>
+    <a href="{% url 'use' %}" class="plan_list_a">ご利用規約</a>
     </div>
   </section>
-
-
-  <section id="section2">
-    <div class="text_set">
-      <h1>スタンダートプラン</h1>
-      <p>無料クラスではものたりない方むけ<br>
-      幅広い人向けの発信</p>
-      <h1>￥2980／月（税込）</h1>
-      <ul>
-        <li>LINE質問・相談</li>
-        <li>ラインマガジン配信</li>
-        <li>動画指導</li>
-        <li>電話相談</li>
-        <li>ご希望の方は練習プラン作成</li>
-      </ul>
-      <a href="{% url 'line' %}" class="button">申込をする</a>
-      <!-- <div id="paypal-button-container"></div>
-      <script src="https://www.paypal.com/sdk/js?client-id=ATYs3NECYd-cN3I8PYQ7EbGQuNQShgYmSf7ZO0HLHN8wA4ridZL542iNDrfygCc_VcdDLxPT7FEusxGZ&vault=true" data-sdk-integration-source="button-factory"></script>
-      <script>
-        paypal.Buttons({
-            style: {
-                shape: 'rect',
-                color: 'white',
-                layout: 'vertical',
-                label: 'subscribe'
-            },
-            createSubscription: function(data, actions) {
-              return actions.subscription.create({
-                'plan_id': 'P-73A75313HX396183CL6JB62Q'
-              });
-            },
-            onApprove: function(data, actions) {
-              alert(data.subscriptionID);
-            }
-        }).render('#paypal-button-container');
-      </script> -->
-      <!-- <a href="">機能詳細</a> -->
-      <a href="{% url 'use' %}">ご利用規約</a>
-    </div>
-  </section>
-
-
-  <section id="section3">
-    <div class="text_set">
-      <h1>プレミアムプラン</h1>
-      <p>現在登録者2名<br>
-      幅広い人向けの発信</p>
-      <h1>￥8980／月（税込）</h1>
-      <ul>
-        <li>LINE質問・相談</li>
-        <li>ラインマガジン配信</li>
-        <li>動画指導</li>
-        <li>電話相談</li>
-        <li>ご希望の方は練習プラン作成</li>
-        <li>直接指導（指導内容によって練習場所は相談）</li>
-      </ul>
-      <!-- <p>スタンダートプランに既に加入しているお客様が対象になります。プレミアムプランに加入を希望される方は、公式LINEより、プレミアムプランへのアップグレード申請を行ってください。</p> -->
-      <!-- <a href="">機能詳細</a> -->
-      <a href="{% url 'line' %}" class="button">申込をする</a>
-      <a href="{% url 'use' %}">ご利用規約</a>
-    </div>
-  </section>
-
-
-{%endblock%}
+{% endfor %}
+{% endblock %}
 </body>
 </html>
