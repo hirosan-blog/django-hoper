@@ -1,11 +1,15 @@
 from django.views.generic import View
 from django.shortcuts import render
 from .models import About,TopMessage,Teacher,Plan,PlanContentsCategory,QuestionCategory,Question
+from django.template.loader import render_to_string
 
 class IndexView(View):
   def get(self,request,*args,**kwargs):
     top_messages = TopMessage.objects.all()
-    top_message = top_messages[0]
+    if top_messages:
+      top_message = top_messages[0]
+    else:
+      top_message = ""
     return render(request,'app/index.html',{"top_message":top_message})
 
 class AboutView(View):
@@ -91,37 +95,22 @@ class ContactView(View):
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            subject = 'お問い合わせありがとうございます。'
-            content = textwrap.dedent('''
-                ※このメールはシステムからの自動返信です。
-                
-                {name} 様
-                
-                お問い合わせありがとうございました。
-                以下の内容でお問い合わせを受け付けいたしました。
-                内容を確認させていただき、ご返信させて頂きますので、少々お待ちください。
-                
-                --------------------
-                ■お名前
-                {name}
-                
-                ■メールアドレス
-                {email}
-                
-                ■メッセージ
-                {message}
-                --------------------
-                ''').format(
-                    name=name,
-                    email=email,
-                    message=message
-                )
+            domain = 'hoper-baseball.com'
+            context = {
+                    'protocol': 'https' if self.request.is_secure() else 'http',
+                    'name':name,
+                    'email':email,
+                    'domain': domain,
+                    'message':message
+            }
 
+            body = render_to_string('app/mail_template/contact.txt', context)
+            subject = render_to_string('app/mail_template/subject.txt', context)
             to_list = [email]
             bcc_list = [settings.EMAIL_HOST_USER]
 
             try:
-                message = EmailMessage(subject=subject, body=content, to=to_list, bcc=bcc_list)
+                message = EmailMessage(subject=subject, body=body, to=to_list, bcc=bcc_list)
                 message.send()
             except BadHeaderError:
                 return HttpResponse("無効なヘッダが検出されました。")
