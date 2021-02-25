@@ -13,7 +13,6 @@ class StaticViewSitemap(sitemaps.Sitemap):
                 'teacher', \
                 'plan', \
                 'question', \
-                'contact', \
                 'privacy', \
                 'law']
 
