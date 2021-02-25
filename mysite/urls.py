@@ -25,6 +25,9 @@ sitemaps = {
     'static': StaticViewSitemap,
 }
 
+admin.site.site_header = 'HOPER 管理画面' 
+admin.site.index_title = '管理メニュー'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
