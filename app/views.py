@@ -88,38 +88,38 @@ class ContactView(View):
             'form': form
         })
     
-    def post(self, request, *args, **kwargs):
-        form = form = ContactForm(request.POST or None)
+    # def post(self, request, *args, **kwargs):
+    #     form = form = ContactForm(request.POST or None)
 
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            domain = 'hoper-baseball.com'
-            context = {
-                    'protocol': 'https' if self.request.is_secure() else 'http',
-                    'name':name,
-                    'email':email,
-                    'domain': domain,
-                    'message':message
-            }
+    #     if form.is_valid():
+    #         name = form.cleaned_data['name']
+    #         email = form.cleaned_data['email']
+    #         message = form.cleaned_data['message']
+    #         domain = 'hoper-baseball.com'
+    #         context = {
+    #                 'protocol': 'https' if self.request.is_secure() else 'http',
+    #                 'name':name,
+    #                 'email':email,
+    #                 'domain': domain,
+    #                 'message':message
+    #         }
 
-            body = render_to_string('app/mail_template/contact.txt', context)
-            subject = render_to_string('app/mail_template/subject.txt', context)
-            to_list = [email]
-            bcc_list = [settings.EMAIL_HOST_USER]
+    #         body = render_to_string('app/mail_template/contact.txt', context)
+    #         subject = render_to_string('app/mail_template/subject.txt', context)
+    #         to_list = [email]
+    #         bcc_list = [settings.EMAIL_HOST_USER]
 
-            try:
-                message = EmailMessage(subject=subject, body=body, to=to_list, bcc=bcc_list)
-                message.send()
-            except BadHeaderError:
-                return HttpResponse("無効なヘッダが検出されました。")
+    #         try:
+    #             message = EmailMessage(subject=subject, body=body, to=to_list, bcc=bcc_list)
+    #             message.send()
+    #         except BadHeaderError:
+    #             return HttpResponse("無効なヘッダが検出されました。")
 
-            return redirect('thanks')
+    #         return redirect('thanks')
 
-        return render(request, 'app/contact.html', {
-            'form': form
-        })
+    #     return render(request, 'app/contact.html', {
+    #         'form': form
+    #     })
 
 
 
