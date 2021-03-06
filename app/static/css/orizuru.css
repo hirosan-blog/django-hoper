@@ -1,4 +1,4 @@
-/* CSS圧縮 2/27 土曜 13:44 */
+/* CSS圧縮 3/6 土曜 13:10 */
 /* 共通CSS */
 :root{
   --matteblack-color:#2d302b;
@@ -995,9 +995,42 @@ margin-bottom: 70px;
   max-width: 720px;
   margin: 0 auto;
 }
-
-
-
+.iphone_back{
+  background-color:var(--accent-color)!important;
+  color:#FFFFFF!important;
+  font-weight: bold;
+  position:fixed;
+  bottom:10px;
+  left:10px;
+  z-index: 10;
+  font-size: 16px!important;
+}
+.pc_back{
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+  color:var(--accent-color)!important;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.back_arrow::before{
+  bottom:3px;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.iphone_arrow::before{
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 /* profile_edit */
 .edit_done{
@@ -1075,7 +1108,6 @@ margin-bottom: 70px;
 }
 .nofollow_text{
   font-size: 12px;
-  /* background-color:red; */
   text-align: center;
 }
 
@@ -1147,6 +1179,7 @@ margin-bottom: 70px;
 }
 .post_form_image{
   font-size: 12px;
+  margin:0 auto;
 }
 .category_form_flex{
   display:flex;
