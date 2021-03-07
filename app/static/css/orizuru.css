@@ -1,4 +1,4 @@
-/* CSS圧縮 3/6 土曜 13:10 */
+/* CSS圧縮 3/7 土曜 13:36 */
 /* 共通CSS */
 :root{
   --matteblack-color:#2d302b;
@@ -62,7 +62,12 @@ a{
   opacity:0.7;
   margin-right: 5px;
 }
-
+.index_radio{
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align:sub;
+  margin-right: 8px;
+}
 
 
 /* base.html */
@@ -268,6 +273,35 @@ body{
   font-size: 18px;
 }
 
+
+
+input[type=radio] {
+  display: none;
+}
+input[type=checkbox] {
+  display: none;
+}
+.label01{
+  position: relative;
+  display: block;
+  padding: 0 0 0 30px;
+  cursor: pointer;
+  line-height: 1.5;
+  margin-left: 10px;
+}
+.label01:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -5px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d3d3d3;
+  border-radius: 50%;
+}
+.input01:checked  + .label01:before {
+  background: var(--accent-color);
+}
 
 
 
@@ -1299,7 +1333,7 @@ padding:12px;
 .post_detail_image{
   max-width: 300px;
   max-height: 400px;
-  margin: 10px auto;
+  margin:10px auto;
   display: block;
 }
 .post_detail_categorys{
@@ -1474,6 +1508,9 @@ padding:12px;
   padding:12px;
   display: flex;
   border-bottom: 1px solid var(--border-color);
+}
+.reply_main{
+  flex:1;
 }
 .reply_flex{
   display:flex;
