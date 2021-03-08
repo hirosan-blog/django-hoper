@@ -1,4 +1,4 @@
-/* CSS圧縮 3/7 土曜 13:36 */
+/* CSS圧縮 3/8 14:36 */
 /* 共通CSS */
 :root{
   --matteblack-color:#2d302b;
@@ -530,21 +530,14 @@ input[type=checkbox] {
   width:90%;
   border-radius: 20px;
   font-weight: bold;
-}
-.signup_confirm_back{
-  border: 1px solid var(--accent-color);
-  color:var(--accent-color)!important;
-  line-height: 36px;
-  margin: 15px auto 0px;
-  font-size: 16px!important;
-}
-.signup_confirm_done{
   background: var(--accent-color);
   color:#FFFFFF;
-  margin-top:20px;
-  outline: none
+  outline: none;
+  margin-bottom: 20px;
 }
-
+.signup_confirm_btn:disabled{
+  opacity: 0.6;
+}
 
 
 
@@ -579,7 +572,9 @@ input[type=checkbox] {
 .signup_category{
   width:100%;
 }
-
+#pro_signup_next:disabled{
+  opacity: 0.5;
+}
 
 
 
