@@ -1,4 +1,4 @@
-/* CSS圧縮 3/8 14:36 */
+/* CSS圧縮 3/9 14:36 */
 /* 共通CSS */
 :root{
   --matteblack-color:#2d302b;
@@ -87,6 +87,9 @@ body{
   color:var(--matteblack-color);
   font-size: 17px;
   overflow:hidden;
+}
+.v-application{
+  margin-top: 112px;
 }
 .v-application--wrap{
   overflow:hidden;
@@ -177,11 +180,9 @@ body{
 
 /* ブロックメイン */
 #main{
-  margin-top:112px;
   min-height: 100vh;
   overflow:hidden;
 }
-
 
 /* フッター */
 .footer{
@@ -1929,7 +1930,7 @@ font-weight: normal;
   margin: 20px auto;
   padding:0px!important;
 }
-.pagenation_li{
+.pagenation_a{
   width:34px;
   height:34px;
   border-radius: 4px;
@@ -1937,6 +1938,9 @@ font-weight: normal;
   line-height: 34px;
   margin-right: 10px;
   box-shadow:1px 1px 1px #ccc;
+  color:rgb(107, 107, 107)!important;
+  font-weight: bold;
+  display: block;
 }
 .pagenation_just{
   background-color: var(--accent-color);
@@ -1945,10 +1949,7 @@ font-weight: normal;
   color:#FFFFFF!important;
   font-weight: bold;
 }
-.pagenation_a{
-  color:rgb(107, 107, 107)!important;
-  font-weight: bold;
-}
+
 
 
 
@@ -2135,3 +2136,5 @@ margin: 0 auto;
 .v-expansion-panel-content__wrap{
   padding:8px 15px;
 }
+
+
