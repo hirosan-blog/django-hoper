@@ -1597,7 +1597,7 @@ background-color: #FFFFFF;
   padding:10px 0px;
 }
 .index_pc_image{
-  background-image: url("/static/img/cccccc.svg");
+  background-image: url("/static/img/header_green.svg");
   height:250px;
   background-size: cover;
   background-position: right 50px bottom;
@@ -1628,8 +1628,8 @@ background-color: #FFFFFF;
 
 
 .index_image_parent{
-  /* background-image: linear-gradient(#fffbbd 80%, #FFFFFF ); */
-  background: #fffbbd;
+  background-image: linear-gradient(#fffbbd 80%, #FFFFFF );
+  /* background: #fffbbd; */
   padding-top: 40px;
   position: relative;
 }
