@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'maintenancemode',
 ]
 
+MIDDLEWARE_CLASSES  = [
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'maintenancemode.middleware.MaintenanceModeMiddleware',
+]
+MAINTENANCE_MODE  =  True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
