@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'maintenancemode.middleware.MaintenanceModeMiddleware',
 ]
-MAINTENANCE_MODE  =  True
+MAINTENANCE_MODE  =  False
 
 
 ROOT_URLCONF = 'mysite.urls'
