@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'app', 
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'maintenancemode',
 ]
 
 MIDDLEWARE = [
