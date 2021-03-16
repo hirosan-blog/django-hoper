@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'app', 
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'maintenancemode',
 ]
 
 MIDDLEWARE = [
@@ -46,6 +47,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'maintenancemode.middleware.MaintenanceModeMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
