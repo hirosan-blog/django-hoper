@@ -1,4 +1,4 @@
-/* CSS圧縮 3/9 14:36 */
+/* CSS圧縮 3/16 14:36 */
 /* 共通CSS */
 :root{
   --matteblack-color:#2d302b;
@@ -80,6 +80,7 @@ body{
   background-color: var(--base-color);
   color:var(--matteblack-color);
   font-family:sans-serif;
+  letter-spacing:0.05em!important;
 }
 #app{
   background-color: var(--base-color);
@@ -505,43 +506,6 @@ input[type=checkbox] {
   width:100%;
 }
 
-
-
-
-
-
-/* signup_confirm */
-.signup_confirm_label{
-  background-color: var(--point-color);
-  padding:5px 0px;
-  border-top:1px solid var(--border-color);
-  font-weight: bold;
-  color:var(--matteblack-color);
-}
-.signup_confirm_item{
-  padding:8px 0px;
-  margin-bottom: 20px;
-  border-left:1px solid var(--border-color);
-  border-right:1px solid var(--border-color);
-  border-bottom:1px solid var(--border-color);
-  overflow: hidden;
-}
-.signup_confirm_btn{
-  height:36px;
-  width:90%;
-  border-radius: 20px;
-  font-weight: bold;
-  background: var(--accent-color);
-  color:#FFFFFF;
-  outline: none;
-  margin-bottom: 20px;
-}
-.signup_confirm_btn:disabled{
-  opacity: 0.6;
-}
-
-
-
 /* signup_done */
 .signup_done_text{
   text-align: left;
@@ -823,7 +787,9 @@ input[type="text"], textarea, select {
 .v-list{
   padding:0px;
 }
-
+.v-list-item{
+  letter-spacing:0.05em;
+}
 .ranking_content{
   font-weight: bold;
   /* color: var(--black-color); */
@@ -1094,6 +1060,7 @@ margin-bottom: 70px;
 }
 .edit_form{
   text-align: right;
+  padding-right:5px;
 }
 #edit_form_des{
   height:150px;
@@ -1416,6 +1383,9 @@ padding:12px;
   border-radius: 3px;
   overflow: hidden;
 }
+.post_detail_bestbtn{
+  background-color:#F7A975!important;
+}
 .post_category{
   text-decoration: underline;
   font-size: 12px;
@@ -1619,16 +1589,89 @@ background-color: #FFFFFF;
   font-weight: bold;
   display: block;
 }
-.pro_title{
+
+.index_pc_image_parent{
+  /* background-image: linear-gradient(#fffbbd 80%, #FFFFFF ); */
+  background: #fffbbd;
   position: relative;
+  padding:10px 0px;
+}
+.index_pc_image{
+  background-image: url("/static/img/cccccc.svg");
+  height:250px;
+  background-size: cover;
+  background-position: right 50px bottom;
+  width:50%;
+  margin-left: auto;
+  max-width: 365px;
+}
+.index_pc_title_set{
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  text-align: left;
+  margin-left: 4%;
+  top:40px;
+}
+.index_pc_main_text{
+  margin-bottom: 40px;
+}
+.index_pc_text{
+  display: inline;
+  font-weight: bold;
+  line-height: 1.8;
+  opacity: 0.8;
+  color:#000000;
+}
+
+
+
+.index_image_parent{
+  /* background-image: linear-gradient(#fffbbd 80%, #FFFFFF ); */
+  background: #fffbbd;
+  padding-top: 40px;
+  position: relative;
+}
+.index_image{
+  background-image: url("/static/img/header_green.svg");
+  height:230px;
+  background-size: contain;
+  background-position: right 8px bottom;
+}
+.index_title_set{
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  text-align: left;
+  margin-left: 4%;
+  top:25px;
+}
+.index_main_text{
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.index_text{
+  font-size: 14px;
+  display: inline;
+  font-weight: bold;
+  line-height: 1.8;
+  opacity: 0.8;
+  color:#000000;
+}
+.index_text span{
+  padding:3px;
+}
+.pro_title{
   border-bottom: 3px solid #ccc;
-  margin: 0 auto 25px;
   font-size: 22px;
+  font-size: bold;
+  position: relative;
+  width:70%;
+  margin:0 auto;
+  margin-bottom: 30px;
   text-align: center;
-  padding-bottom: 5px;
-  width:80%;
-  font-weight: normal;
-  letter-spacing: 0.07em;
 }
 .pro_title:before {
   position: absolute;
@@ -1639,13 +1682,14 @@ background-color: #FFFFFF;
   content: '';
   background: var(--accent-color);
 }
+
 .pro_search_container{
   justify-content: center;
   display: flex;
   flex-direction: column;
   background-color:#FFFFFF;
-  border:1px solid var(--border-color);
   border-radius: 4px;
+  border:1px solid var(--border-color);
 }
 .pro_search_set{
   display:flex;
@@ -1654,7 +1698,7 @@ background-color: #FFFFFF;
 }
 .pro_search_item{
   width:100%;
-  background-color: #FFFFFF;
+  background-color: #FFFFFc;
   display: flex;
   font-weight: bold;
   color:var(--matteblack-color)!important;
