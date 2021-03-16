@@ -51,7 +51,6 @@ MIDDLEWARE = [
     'maintenancemode.middleware.MaintenanceModeMiddleware',
 ]
 
-MAINTENANCE_MODE = True
 
 ROOT_URLCONF = 'mysite.urls'
 
